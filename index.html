@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="formcontainer">
+        <form action="src/entry-upload.php" method="post" enctype="multipart/form-data">
+
+            <h1>Upload file</h1>
+            Title:
+            <input type="text" name="title" maxlength="20" required>
+
+            File Name:
+            <input type="text" name="filename" maxlength="20" onkeypress="return event.charCode != 32" required>
+
+            Item Description:
+            <textarea name="description" maxlength="255" required></textarea>
+
+            Date of Completion:
+            <input type="date" name="creationdate">
+
+            Unfinished:
+            <input type="checkbox" name="unfinished">
+
+            <input type="file" name="userfile">
+
+            <input type="submit" value="Upload Image" name="submit">
+
+        </form>
+        <a href="art.php">Display</a>
+        <a href="manage.php">Manage</a>
+    </div>
+</body>
+
+</html>

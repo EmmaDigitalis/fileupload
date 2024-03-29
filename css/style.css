@@ -1,0 +1,127 @@
+*{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.formcontainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+figcaption{
+    text-align: center;
+    color: grey;
+}
+
+.noDisplay{
+    display: none;
+}
+
+form{
+    width: 362px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid grey;
+    padding: 64px 0;
+}
+
+form h2, form h2>*{
+    font-size: 32px;
+}
+
+form>figure>img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+form>*{
+    display: block;
+    flex-grow: 1;
+}
+form>input{
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.artcontainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artcontainer>.item{
+    margin: 16px;
+    width: 200px;
+    max-height: 360px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: grey;
+    position: relative;
+    transition: 0.3s ease-in;
+}
+
+.artcontainer>.item>img{
+    max-width: 100%;
+    height: 200px;
+}
+
+.hidden-art{
+    opacity: 0;
+    width: 0 !important;
+    max-height: 0 !important;
+    transform: scale(0%);
+    margin: 0 !important;
+    padding: 0 !important;
+    background: rgb(165, 153, 153) !important;
+}
+
+.showed-art{
+    opacity: 1;
+    transform: scale(100%);
+    background: rgb(165, 153, 153) !important;
+}
+
+.floater{
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    background-color: lightgrey;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    width: 240px;
+}
+
+.floater>*{
+    margin: 0;
+    padding: 0;
+}
+
+.floater>.checkbox{
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 2px solid grey;
+    cursor: pointer;
+    line-height: 32px;
+    text-align: center;
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.floater>p{
+    margin-left: 12px;
+    width: 100%;
+    text-align: center;
+}
